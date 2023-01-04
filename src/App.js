@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { Box } from '@mui/material';
+import { Container } from '@mui/system';
 import './App.css';
+import SampleForm from './components/SampleForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="sm">
+      <Box
+        sx={{
+          flexGrow: 1,
+          alignItems: 'center',
+          flexDirection: 'column',
+          padding: 4,
+        }}
+      >
+        <SampleForm />
+      </Box>
+    </Container>
   );
 }
 
